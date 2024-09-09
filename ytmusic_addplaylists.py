@@ -8,7 +8,7 @@ ytmusic = YTMusic("oauth.json")
 print("-------------- ADD PLAYLISTS TO LIBRARY --------------")
 
 # Step 1: Read playlist info from file
-filename = "SC_AllPlaylists_Missed.json"
+filename = "SC_AllPlaylists.json"
 
 with open(filename, 'r', encoding='utf-8') as file:
     readdata = json.load(file)
@@ -16,7 +16,6 @@ with open(filename, 'r', encoding='utf-8') as file:
 all_found_playlists = readdata['all_found_playlists']
 
 # Step 2: Create playlist and add songs to it
-
 for playlist in all_found_playlists:
 	playlist_title = playlist['title']
 	playlist_songs = playlist['songs']
