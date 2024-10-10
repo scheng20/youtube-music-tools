@@ -27,5 +27,5 @@ for playlist in all_found_playlists:
 	for song in playlist_songs:
 		all_song_video_ids.append(song['videoID'])
 	
-	ytmusic.add_playlist_items(playlist_id, all_song_video_ids)
+	result = ytmusic.add_playlist_items(playlist_id, all_song_video_ids, None, True)
 	print("PROCESSED: ", playlist_title)
